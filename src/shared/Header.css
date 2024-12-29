@@ -1,0 +1,197 @@
+/* Header Container */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.header-container:hover {
+  background-color: #f1f1f1; /* Subtle background change on hover */
+}
+
+/* Logo Section */
+.header-logo {
+  font-size: 1.8rem;
+  font-family: "Poppins", serif;
+  font-weight: bold;
+  color: #333; /* Slightly softer color */
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-logo:hover {
+  color: #007bff; /* Vibrant blue for hover */
+  transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Icons Section */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Header Icon Buttons */
+.header-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.header-icon {
+  font-size: 1.8rem;
+  color: #555;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-icon-btn:hover .header-icon {
+  color: #007bff;
+  transform: scale(1.1); /* Subtle scale effect on hover */
+}
+
+/* Profile Section */
+.header-profile {
+  position: relative;
+}
+
+/* Profile Image */
+.header-profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.header-profile-img:hover {
+  transform: scale(1.1);
+  border-color: #007bff; /* Blue border on hover */
+}
+
+/* Dropdowns */
+.profile-dropdown,
+.messages-dropdown,
+.notifications-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  width: 300px;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Profile Menu */
+.profile-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-menu-item {
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.profile-menu-item:hover {
+  background-color: #f5f5f5;
+  color: #007bff; /* Color change on hover */
+}
+
+/* Divider for Menu */
+.profile-divider {
+  margin: 0;
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+/* Notifications & Messages */
+.notifications-list,
+.messages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notifications-item,
+.messages-item {
+  padding: 12px 15px;
+  font-size: 0.9rem;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.notifications-item:last-child,
+.messages-item:last-child {
+  border-bottom: none;
+}
+
+.notifications-item.unread,
+.messages-item.unread {
+  background-color: #f9f9f9;
+  font-weight: bold;
+  color: #ff5722; /* Orange for unread items */
+}
+
+.notifications-item.read,
+.messages-item.read {
+  color: #888;
+}
+
+.notifications-item:hover,
+.messages-item:hover {
+  background-color: #f5f5f5;
+  color: #007bff;
+}
+
+/* Badge for Notifications */
+.notification-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #ff4d4d;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.notification-badge:hover {
+  transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
